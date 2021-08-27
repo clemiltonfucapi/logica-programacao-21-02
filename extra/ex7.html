@@ -1,0 +1,31 @@
+<html>
+
+<script>
+    /* Crie um programa que leia 10 numeros e diga qual
+     o menor numero lido:*/
+
+
+     var num, cont=1;
+     var menor; // trono
+
+     //o primeiro elemento senta no trono
+     num = parseInt(prompt("Digite um numero: "))
+     console.log(num)
+     menor = num;
+
+     // loop para os elementos restantes : 9 elementos
+     // cont: 1 até 9
+     while(cont<=9){
+        num = parseInt(prompt("Digite um numero"))
+        console.log(num)
+        if(num < menor){
+            //novo elemento no trono
+            menor = num
+        }
+        cont++;
+     }
+
+     console.log("O menor é: "+ menor)
+
+</script>
+</html>

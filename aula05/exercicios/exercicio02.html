@@ -1,0 +1,32 @@
+<html>
+<script>
+/*
+entradas: um numero inteiro
+saidas:
+    - "É divisivel por 6"
+    - "Nao e divisivel por "6
+Logica:
+    Se numero é divisivel por 2 e 3
+        É divisivel por 6
+    Senao
+        Nao é divisivel
+
+10 é divisivel por 2, pois 10%2 ===0
+12 é divisivel por 3, pois 12%3 === 0
+*/
+
+var num;
+
+num = parseInt(prompt("Digite um numero"))
+
+//se numero é divisivel por 2 e 3
+if(num%2==0 && num%3==0 ){
+    alert("É divisivel por 6")
+}else{
+    alert("Nao é divisivel por 6")
+}
+
+
+
+</script>
+</html>

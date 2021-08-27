@@ -1,0 +1,38 @@
+<html>
+<script>
+/* 
+Entradas: num1,num2, num3 (numeros inteiros)
+Saida: Media ponderada
+
+Logica:
+leia num1,num2,num3
+
+SE num1>num2 E num1>num2
+    //caso num1 seja o maior
+    mediaP = (num1*2 + num2*3 + num3*3)/8
+SENAO SE num2>num3 E num2>num1
+    //caso num1 seja o maior
+    mediaP = (num1*3 + num2*2 + num3*3)/8
+SENAO 
+    //caso num3 seja o maior
+    mediaP = (num1*3+ num2*3 + num3*2)/8
+FIM SE 
+imprime(mediaP)
+*/
+
+var n1,n2,n3,mediaP;
+n1 = parseFloat(prompt("Digite um numero inteiro"))
+n2 = parseFloat(prompt("Digite um numero inteiro"))
+n3 = parseFloat(prompt("Digite um numero inteiro"))
+
+if(n1>n2 && n1>n3){
+    mediaP = (n1*2 + n2*3 + n3*3)/8
+}else if(n2>n1 && n2>n3){
+    mediaP = (n1*3 + n2*2 + n3*3)/8
+}else{
+    mediaP = (n1*3+ n2*3 + n3*2)/8
+}
+alert(mediaP)
+</script>
+
+</html>

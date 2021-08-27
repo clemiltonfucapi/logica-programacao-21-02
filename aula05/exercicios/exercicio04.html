@@ -1,0 +1,66 @@
+<html>
+<script>
+/*
+Entradas do usuario: litros_vendidos, tipo_combustivel
+Saida: valor a ser pago COM DESCONTO
+informacoes: 
+    - preco gasolina: 5.815
+    - preco do alcool: 4.592
+
+Calculo do desconto
+    - Ex: 20 Litros de gasolina?
+    Valor s/ desconto: 20*5.815 == 116.3
+    Desconto: 2% de 116.3       == 0.02*116.3
+    Valor c/ desconto: 116.3 - 0.02*116.3
+    
+    - Ex 50 Litros de alcool
+    Valor c/ desconto: 229.6 - 0.04*229.6
+
+Logica p/ selecionar desconto
+SE (tipo_combustivel=='G')
+    SE(qtd_litros <= 25)
+        calcula desconto com 3%
+        valor = qtd*5.815 // valor sem desconto
+        valor_final = valor - 0.03*valor
+    SENAO
+        calcula desconto com 5%
+    FIM SE
+SENAO SE(tipo combustivel=='A')
+    SE(qtd_litros<=25)
+        calcula desconto com 2%
+    SENAO
+        calcula desconto com 4%
+    FIM SE
+FIM SE
+*/
+
+var qtd_litros, tipo;
+var valor, valorDesc; //valor s/ desconto e c/ desconto
+tipo = parseInt("Digite o tipo do combustivel (A - alcool/G - gasolina)")
+qtd_litros = parseFloat(prompt("Digite a quantidade de litros"))
+
+if(tipo=='G'){
+    valor = qtd_litros*5.815
+    if(qtd_litros<=25){
+        valorDesc = valor -0.03*valor
+    }else{
+        valorDesc = valor - 0.05*valor
+    }
+    alert("Valor: R$ "+valorDesc)
+}else if(tipo=='A'){
+    valor = qtd_litros*4.592
+    if(qtd_litros<=25){
+        valorDesc = valor - 0.02*valor
+    }else{
+        valorDesc = valor - 0.05*valor
+    }
+    alert("Valor: R$ "+valorDesc)
+}else{
+    alert("Tipo invalido")
+}
+
+
+
+
+</script>
+</html>

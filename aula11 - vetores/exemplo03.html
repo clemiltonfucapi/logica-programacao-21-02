@@ -1,0 +1,26 @@
+
+
+
+<html>
+<script>
+/*  Implemente um programa que recebe 5 frutas e
+armazena seus nomes num vetor. Depois o programa
+permite o usuário consultar e exibir em que posição está
+armazenada a “Banana”.*/
+
+var frutas = new Array(5)
+
+// leitura das frutas
+for( let i = 0 ; i < 5 ; i++){
+    frutas[i]  = prompt("Digite o nome de uma fruta")
+}
+
+for( let i=0 ; i < 5 ; i++){
+    if(frutas[i] == "Banana" || frutas[i]=="banana"  ) {
+        // no alert abaixo usamos template string
+        alert(` a banana esta na posicao: ${i+1}`)
+    }
+}
+
+</script>
+</html>

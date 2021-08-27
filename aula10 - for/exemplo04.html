@@ -1,0 +1,21 @@
+
+<html>
+<script>
+    var num, cont;
+    var string=""
+    
+    num = parseInt(prompt("Digite um numero inteiro para"+
+                    " descobrir seus divisores"))
+    /*  for -> cont varia de 2 até N/2  */
+    for(cont = 2 ; cont <= Math.floor(num/2) ; cont++){
+        if( num % cont ==0){
+            // se o cont é divisor de num(ex: 42)
+            console.log(cont)
+            string+= cont + "\n"
+        }
+    }
+    //alert("Os divisores de "+num+" são: \n"+string)
+    alert(`Os divisores de ${num} sao:
+ ${string}`) 
+</script>
+</html>

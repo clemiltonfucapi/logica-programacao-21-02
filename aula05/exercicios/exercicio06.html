@@ -1,0 +1,58 @@
+<html>
+<script>
+/* 
+Entradas: num1,num2, num3 (numeros inteiros)
+Saidas: X,Y,Z (numeros em ordem crescente)
+
+Logica:
+leia num1,num2,num3
+
+//Caso num1 seja o menor
+SE num1<num2 E num1 <num2
+    SE num2<num3
+        imprime(num1,num2,num3) 
+    SENAO
+        imprime(num1,num3,2)
+    FIM SE
+SENAO SE (num2<num1 && num2<num3)
+    SE num1<num3
+        imprime(num2,num1,num3)
+    SENAO
+        imprime(num2,num3,num1)
+    FIM SE
+SENAO // caso o terceiro numero seja o menor
+    SE num1<num2
+        imprime(num3,num1,num2)
+    SENAO
+        imprime(num3,num2,num3)
+FIM SE 
+
+*/
+
+var n1,n2,n3,mediaP;
+n1 = prompt("Digite um numero inteiro")
+n2 = prompt("Digite um numero inteiro")
+n3 = prompt("Digite um numero inteiro")
+
+if(n1<n2 && n1<n2){
+    if(n2<n3){
+        alert(n1 + ","+n2+","+n3)
+    }else{
+        alert(n1 + ","+n3+","+n2)
+    }
+}else if(n2 < n1 && n2 <n3){
+    if(n1>n3){
+        alert(n2 + ","+n1+","+n3)
+    }else{
+        alert(n2+","+n3+","+n1)
+    }
+}else{
+    if(n1<n2){
+        alert(n3+","+n1+","+n2)
+    }else{
+        alert(n3+","+n2+","+n1)
+    }
+}
+</script>
+
+</html>

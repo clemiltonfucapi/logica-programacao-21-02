@@ -1,0 +1,30 @@
+<html>
+<script>
+/*
+Entrada: consumo de agua em m^3
+Saida: valor total da conta
+
+Logica:
+SE (consumo<=20)
+    valor = consumo*8.5
+SENAO SE (consumo > 20)
+    valor = consumo*11
+SENAO
+    imprime(valor indefinido!)
+*/
+
+var consumo, valor
+
+consumo = parseFloat(prompt("Digite o consumo: "))
+if(consumo<=20){
+    valor  = consumo*8.5
+    alert("Consumo: R$ "+valor)
+}else if(consumo>20){
+    valor = consumo*11
+    alert("Consumo: R$ "+valor)
+}else{
+    alert("Consumo invalido!")
+}
+
+</script>
+</html>

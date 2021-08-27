@@ -1,0 +1,25 @@
+<html>
+
+<script>
+    /* 
+    Algoritmo fatorial
+    fat<-0, 1
+    Leia(num)
+    Faça um loop variar de num até 1 (Ex: 5,4,3,2,1)
+        - Realize a multiplicação (fat<-fat*cont   )
+        5! = 5.4.3.2.1
+        */
+    var num,cont,fat=1;
+    var string
+    num = parseInt(prompt("Digite um numero inteiro"))
+    string = num + "! = ";
+    for( cont=num; cont>= 1  ;  cont-- ){
+        fat = fat * cont
+        //composicao de strings
+        string= string + cont +"."
+        
+    }
+    console.log(fat)
+    alert(string + "=" +fat)
+</script>
+</html>

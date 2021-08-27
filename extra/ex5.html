@@ -1,0 +1,58 @@
+<html>
+<script>
+
+    /* Desenvolva um gerador de tabuada, capaz de gerar a tabuada 
+    de qualquer número inteiro entre 1 a N. 
+    O usuário deve informar de qual numero ele deseja ver a tabuada. 
+    Depois o usuario informar o valor que a tabuada deve terminar N. 
+    A cada 5 numeros voce deve mostrar uma linha pontilhada (-------- )
+    Você deve mostra em um alerta a mensagem abaixo: 
+    Entradas:
+        - Montar a tabuade de: 5
+        - Terminar em: 25
+    Tabuada de 5:
+        5 X 1 = 5
+        5 x 2 = 10
+        5 x 3 = 15
+        5 x 4 = 20
+        5 x 5 = 25
+        ------------------------
+        5 x 6 
+        ...
+        5 X 10 = 50
+        ------------------------
+        5 x 11 = 55
+
+    - entradas: numero entre 1 a 10 (nao entra loop)
+    
+    - O que deve ser repetido?
+        - calculo da multiplicação
+        - composição de strings
+       
+
+    - Como controlar as repetições
+        - contador:
+           Ex: cont -> 1 até N(termino da tabuada)           
+    */
+
+    var num, termino,mult;
+    var cont;
+    num = parseInt(prompt("Montar a tabuada de: "))
+    termino = parseInt(prompt("Terminar em: "))
+
+    /* for( inicialização ; condição ;  incremento )
+    
+        iniciliazação: cont=1
+        condição:    cont <= termino
+        incremento: cont++
+    */
+    for(cont = 1 ; cont<= termino ; cont++){
+        mult = num * cont
+        console.log(num + " X "+cont+" = "+mult)
+        if(  cont%5==0  ){
+            // imprime linha a cada 5 numeros
+            console.log("---------------------")
+        }
+    }
+</script>
+</html>

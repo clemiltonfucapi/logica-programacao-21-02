@@ -1,0 +1,19 @@
+
+
+<html>
+<script>
+var num; 
+var soma = 0, cont=0, media
+do{
+    num = parseInt(prompt("Digite um numero inteiro. \n"+
+    "P/ sair digite 0"))
+    console.log(num)
+    if(num!=0 && num%2==0){
+        soma=soma+num; //guarda soma dos numeros pares
+        cont++; // conta quantidade de numeros pares
+    }
+}while(num!=0)
+media = soma/cont;
+console.log("A media e: "+ media)
+</script>
+</html>

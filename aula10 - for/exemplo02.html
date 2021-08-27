@@ -1,0 +1,25 @@
+
+<html>
+
+<script>
+    var i;
+    var soma =0;
+    var string =""
+    for(  i=0 ; i<=9; i++ ){
+        //realizar a soma: 2^i
+        console.log(Math.pow(2,i))
+        soma = soma + Math.pow(2,i);
+        string += Math.pow(2,i)
+        if(i<=8){
+            string+="+"
+        }else{
+            //ultimo numero
+            string+= "="
+        }
+    }
+
+    string+=soma
+    alert(string)
+    console.log("A soma e: "+ soma)
+</script>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<script>
+
+var idade;
+/* 
+    parseInt(x) -> converte x em inteiro(number)
+    caso x não for numero:
+        - retorna NaN (Not a Number)
+*/
+idade = parseInt(prompt("Digite uma idade"))
+
+if(Number.isNaN(idade)==true){
+    alert("Nao e um numero")
+}else{
+    // idade é um numero
+    if(idade >= 18 ){
+        alert("maior de idade")
+    }else{
+        alert("menor de idade")
+    }
+}
+
+
+</script>
+</html>

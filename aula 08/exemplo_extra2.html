@@ -1,0 +1,40 @@
+
+
+<html>
+    <script>
+
+var tipo_comb;
+var qtdAlcool=0,qtdGas=0, qtdDies =0
+do{
+    tipo_comb = prompt("Digite o tipo do combustivel: "+"\n"
+                    +"1 - Alcool"+"\n"
+                    +"2 - Gasolina"+"\n"
+                    +"3 - Diesel"+"\n"
+                    +"4 - Sair"+"\n")
+        if(tipo_comb==1){
+            alert("Alcool")
+            qtdAlcool++;
+        }
+        else if(tipo_comb==2){
+            alert("Gasolina")
+            qtdGas++;
+        }
+        else if(tipo_comb==3){
+            alert("Diesel")
+            qtdDies++
+        }else if(tipo_comb!=4){
+            alert("Entrada Invalida")
+        }
+}while(tipo_comb!=4)
+
+console.log("Muito Obrigado!")
+console.log("Alcool: "+qtdAlcool)
+console.log("Gasolina: "+qtdGas)
+console.log("Diesel: "+qtdDies)
+
+
+
+
+
+    </script>
+</html>

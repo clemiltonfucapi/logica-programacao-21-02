@@ -1,0 +1,39 @@
+<html>
+<script>
+
+    /*  Digite 10 numeros e realize a soma deles 
+    
+    - O que deve ser repetido?
+       - Leitura dos numeros
+       - A soma dos numeros (através de um acumulador)
+
+    - Como controlar as repetições
+        - Através de um contador
+            - cont -> 1 até 10
+            - cont -> 0 até 9
+            - cont -> 10 até 1
+            - cont -> 0 até 10 -> ERRADO!!!
+    
+    */
+    var num;
+    var cont; 
+    var soma = 0 ; //acumulador
+    /* contador de 0 até 10  - repete 11 vezes 
+    ERRRADO!!!
+    cont=0
+    while(cont <= 10){
+        cont++; // cont = cont+1
+    }
+    */ 
+
+    /* contador de 1 até 10 */
+    cont =1 // inicialização
+    while(cont<=10){
+        num = parseFloat(prompt("Digite um numero"));
+        soma = soma + num; // acumulando os numeros
+
+        cont++; // incremento -> sempre vai no fim do while
+    }
+    console.log("A soma dos numeros: "+soma)
+</script>
+</html>

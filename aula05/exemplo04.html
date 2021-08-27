@@ -1,0 +1,37 @@
+
+<html>
+<script>
+    var a,b,c
+
+    a = parseFloat(prompt("Digite o primeiro lado: "))
+    b = parseFloat(prompt("Digite o segundo numero: "))
+    c = parseFloat(prompt("Digite o terceiro numero: "))
+
+
+    if(  a<b+c && b<a+c && c<a+b){ 
+        // alert("e um triangulo")
+        if( a==b && b==c && a==c){
+            alert("Triangulo equilatero")
+        }
+        else if(a==b || b==c || a==c){
+            alert('Triangulo isosceles')
+        }else{
+            alert('Triangulo escaleno')
+        }
+
+    }
+    else{
+        alert("nao e triangulo")
+    }
+
+if(exp){
+    alert(a,b,c)
+}else if(exp2){
+    alert(a,c,b)
+}else if(exp3){
+    alert(b,a,c)
+}
+
+
+</script>
+</html>

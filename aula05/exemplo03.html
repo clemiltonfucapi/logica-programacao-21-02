@@ -1,0 +1,48 @@
+<html>
+<script>
+/* 
+Entradas: a, b, e c
+Saidas: raiz1 e raiz2
+
+delta = b*b - 4*a*c
+
+Se delta negativo
+    - Nao tem Raizes reais
+Se delta==0 ou delta==-1
+    - Raizes iguais
+    - Calculo: (-b + Math.sqrt(delta))/(2*a)
+Se delta positivo
+    - Raizes diferentes
+    - raiz1 = (-b + Math.sqrt(delta))/(2*a)
+    - raiz2 = (-b - Math.sqrt(delta))/(2*a)
+*/
+
+var a,b,c; //entradas
+var raiz1,raiz2; //saidas
+var delta;
+
+a = prompt("Digite o coeficiente de x^2")
+b = prompt("Digite o coeficiente de x")
+c = prompt("Digite o coeficiente sozinho")
+
+delta = b*b - 4*a*c;
+
+if(delta<0){
+    alert("Não tem raizes reais")
+}
+if(delta==0){
+    raiz1 = (-b+Math.sqrt(delta))/(2*a)
+    raiz2 = raiz1;
+    alert("Raizes iguais: "+raiz1)
+}
+if(delta>0){
+    // a=1, b=-5, c =6
+    raiz1 = (-b + Math.sqrt(delta) ) / (2*a)
+    raiz2 = (-b - Math.sqrt(delta) ) / (2*a)
+    alert("raiz1: "+ raiz1 + "\n" + "raiz2: "+raiz2 )
+
+}
+
+
+</script>
+</html>

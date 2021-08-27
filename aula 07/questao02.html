@@ -1,0 +1,18 @@
+<html>
+<script>
+var numerodias; //entrada
+var anos, meses,dias //saidas
+var resto
+
+numerodias = prompt("Digite quantidade de dias")
+
+anos = Math.floor(numerodias/365)
+resto = numerodias%365
+meses = Math.floor(resto/30)
+dias = resto % 30
+console.log("Anos: " + anos +", Meses: "+ meses +
+            "Dias: "+dias);
+
+</script>
+
+</html>

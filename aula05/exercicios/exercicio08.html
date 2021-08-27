@@ -1,0 +1,39 @@
+<html>
+<script>
+/*
+Entradas: Peso e altura
+Saida: Classificação IMC
+
+Logica:
+IMC = peso/(altura*altura)
+SE IMC < 18.5
+    imprime("Abaixo do peso")
+SENAO SE IMC>=18.5 E IMC<25
+    imprime("Peso ideal")
+SENAO SE IMC>=25 E IMC<30
+    imprime("Sobrepeso")
+SENAO SE IMC>=30 e IMC<40
+    imprime("Obesidade")
+SENAO // maior que 40
+    imprime("Obeisdade mórbida")
+*/
+
+var peso,altura, imc
+peso = parseFloat(prompt("Digite o peso"))
+altura = parseFloat(prompt("Digite a altura"))
+
+imc = peso/(altura*altura)
+
+if(imc<18.5){
+    alert("Abaixo do peso")
+}else if(imc>=18.5 && imc<25){
+    alert("Peso ideal")
+}else if(imc>=25 && imc<30){
+    alert("Acima do peso")
+}else if(imc>=30 && imc<40){
+    alert("Obesidade")
+}else{
+    alert("Obesidade morbida")
+}
+</script>
+</html>

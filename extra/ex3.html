@@ -1,0 +1,28 @@
+<html>
+<script>
+
+    /*  Digite 10 numeros e realize a soma deles -> FOR 
+    
+    - O que deve ser repetido?
+       - Leitura dos numeros
+       - A soma dos numeros (através de um acumulador)
+
+    - Como controlar as repetições
+        - Através de um contador
+            - cont -> 0 até 9
+    
+    */
+    var num,cont
+    var soma=0;
+    /* for( inicialização ; condição ;  incremento )
+    */
+    for( cont=0  ; cont<=9  ; cont++  ){
+        /* repete 10 vezes */
+
+        num = parseInt(prompt("Digite um numero: "))
+        soma += num; // soma = soma + num
+        
+    }
+    console.log("A soma dos numeros: "+soma)
+</script>
+</html>

@@ -1,0 +1,30 @@
+
+<html>
+<script>
+    var x,y,menor,maior
+    x = parseInt(prompt("Digite um numero"))
+    y = parseInt(prompt("Digite outro numero"))
+    
+    if(x > y){
+        maior = x
+        menor = y
+    }else{
+        maior = y
+        menor = x
+    }
+    console.log(menor,maior)
+    // valor inicial loop
+    var cont = menor + 1
+    var soma = 0;
+    while(cont< maior){
+        // cont até (maior-1)
+        console.log(cont)
+        //soma dos impares
+        if(cont%2)
+            soma+=cont; // soma = soma+cont
+        cont++;
+    }
+    console.log("SOMA impares: "+soma)
+
+</script>
+</html>

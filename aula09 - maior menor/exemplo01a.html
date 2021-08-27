@@ -1,0 +1,22 @@
+<html>
+
+<script>
+    var num,cont=1,maior;
+
+    num = parseInt(prompt("Digite um numero"))
+    console.log(num)
+    //colocar numero no trono
+    maior = num;
+    while(cont<=9){
+        num = parseInt(prompt("Digite um numero"))
+        console.log(num)
+        if(num > maior){
+            //novo valor de num "senta no trono"
+            maior = num
+        }
+
+        cont++;
+    }
+    console.log("O maior e:" +maior)
+</script>
+</html>

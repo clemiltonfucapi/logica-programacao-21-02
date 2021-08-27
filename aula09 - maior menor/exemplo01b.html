@@ -1,0 +1,20 @@
+
+
+<html>
+
+<script>
+var num,cont=1,maior;
+while(cont<=10){
+    num = parseInt(prompt("Digite o " + cont +"º numero"))
+    console.log(num)
+    //caso o loop esta na 1º iteração
+    if(cont==1)
+        maior = num;
+    
+    if(num > maior)
+        maior = num;
+    cont++
+}
+console.log("O maior numero e: "+maior)
+</script>
+</html>

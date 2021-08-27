@@ -1,0 +1,40 @@
+<html>
+<script>
+
+    /* Desenvolva um gerador de tabuada, capaz de gerar a tabuada 
+    de qualquer número inteiro entre 1 a 10. O usuário deve informar
+    de qual numero ele deseja ver a tabuada. Você deve mostra em um
+    alerta a mensagem abaixo: 
+
+    Tabuada de 5:
+        5 X 1 = 5
+        5 X 2 = 10
+        5 x 3 = 15
+        ...
+        5 X 10 = 50
+    - entradas: numero entre 1 a 10 (nao entra loop)
+    
+    - O que deve ser repetido?
+        - calculo da multiplicação
+       
+
+    - Como controlar as repetições
+        - contador:
+           Ex: cont -> 1 até 10            
+    */
+
+    var num,cont;
+    var mult;
+    var string = ""; //mostrar no alerta
+
+    num = parseInt(prompt("Digite um numero de 1 até 10"))
+
+    for(cont=1 ; cont<=10 ; cont++){
+        mult = num * cont
+        string += num +" X " + cont  +" = "+mult + "\n"
+        console.log(num +" X " + cont  +" = "+mult)
+
+    }
+    alert("Tabuada do "+num + "\n"+string)
+</script>
+</html>

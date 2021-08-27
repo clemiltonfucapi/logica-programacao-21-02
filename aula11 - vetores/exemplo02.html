@@ -1,0 +1,27 @@
+
+
+
+<html>
+
+<script>
+
+const qtd=10; // define uma constante do tamanho do vetor
+var media, soma=0
+var notas = new Array(qtd)
+
+/* let i -> cria variavel local (dentro do for) */
+for( let i=0; i< qtd ; i++  ){
+    notas[i] = parseFloat(prompt(`Digite a nota ${i+1}`))
+    soma = soma + notas[i]; // acumulando as notas
+}
+//calculo media
+media = soma/qtd;
+for(let i=0 ; i < qtd ; i++){
+    //caso nota acima da média
+    if(notas[i] > media)
+        console.log(notas[i])
+}
+console.log("A média é: "+media)
+
+</script>
+</html>

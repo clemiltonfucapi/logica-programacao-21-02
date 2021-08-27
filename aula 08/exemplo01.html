@@ -1,0 +1,29 @@
+
+<html>
+    <script>
+        var cont = 0,num;
+        //variavel contadora de pares e impares
+        var qtdPares=0,qtdImpar = 0,qtdPos = 0,qtdNeg=0;
+        while(cont<10){
+            //leitura do numero
+            num = parseInt(prompt("Digite um numero inteiro"))
+            //caso numero par
+            if(num%2==0){
+                qtdPares++; // qtdPares = qtdPares + 1
+            }else{
+                qtdImpar++;
+            }
+            //caso positivo
+            if(num>=0)
+                qtdPos++;
+            else
+                qtdNeg++;
+            console.log(num)
+            cont++
+        }
+        console.log("Quantidade de pares: " + qtdPares)
+        console.log("Quantidade de impares: "+qtdImpar)
+        console.log("Quantidade positivos: "+ qtdPos)
+        console.log("Quantidade negativos: "+qtdNeg)
+    </script>
+</html>

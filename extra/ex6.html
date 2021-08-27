@@ -1,0 +1,29 @@
+<html>
+
+<script>
+    /* Crie um programa que leia 10 numeros e diga qual
+     o maior numero lido:*/
+
+
+     var num, cont=1;
+     var maior; // trono
+
+     //o primeiro elemento senta no trono
+     num = parseInt(prompt("Digite um numero: "))
+     maior = num;
+
+     // loop para os elementos restantes : 9 elementos
+     // cont: 1 até 9
+     while(cont<=9){
+        num = parseInt(prompt("Digite um numero"))
+        if(num > maior){
+            //novo elemento no trono
+            maior = num
+        }
+        cont++;
+     }
+
+     console.log("O maior é: "+ maior)
+
+</script>
+</html>
