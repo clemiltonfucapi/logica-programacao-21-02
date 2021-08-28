@@ -1,27 +1,39 @@
 
 
-
 <html>
+    <script>
+         /* Implemente um programa que recebe a nota de 50 alunos
+          na primeira unidade e calcula a média geral dessas 
+          notas. 
+          Crie 2 vetores. O primeiro vai armazenar as notas ABAIXO
+          da media. O segundo vai armazenar as notas ACIMA da media
+          */
+        
+        const QTD_ALUNOS=10; // define uma constante
+          
+        var media,soma =0;
+        var notas = new Array(QTD_ALUNOS);
+        /* let i -> cria variavel local ( só visivel dentro do for)*/
+        for(let i=0 ; i < QTD_ALUNOS ; i++){
+            notas[i] = parseFloat(prompt("Digite a nota "+(i+1)))
+            soma = soma + notas[i]
+        }
+        media = soma/QTD_ALUNOS;
+        console.log(media)
 
-<script>
+        var acima = new Array(0); //notas acima da media
+        var abaixo = new Array(0); // abaixo da media
 
-const qtd=10; // define uma constante do tamanho do vetor
-var media, soma=0
-var notas = new Array(qtd)
+        for(let i = 0; i < QTD_ALUNOS ; i++){
+            if( notas[i] >= media){
+                //inserir no vetor acima
+                // push(num) -> insere no fim do vetor
+                acima.push( notas[i]) 
+            }else{
+                // vetor abaixo
+                abaixo.push( notas[i])
+            }
+        }
 
-/* let i -> cria variavel local (dentro do for) */
-for( let i=0; i< qtd ; i++  ){
-    notas[i] = parseFloat(prompt(`Digite a nota ${i+1}`))
-    soma = soma + notas[i]; // acumulando as notas
-}
-//calculo media
-media = soma/qtd;
-for(let i=0 ; i < qtd ; i++){
-    //caso nota acima da média
-    if(notas[i] > media)
-        console.log(notas[i])
-}
-console.log("A média é: "+media)
-
-</script>
+    </script>
 </html>
