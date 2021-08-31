@@ -1,0 +1,35 @@
+<html>
+<script>
+    /* Faça um programa que leia os nomes de 10 alunos e a média parcial 
+    de cada. Armazene cada informação em um vetor. Crie um terceiro vetor 
+    que diga que se o aluno está aprovado(nota>=6), de recuperação 
+    ( nota<6 e nota>4) ou reprovado( nota >4) */
+
+    const QTD_ALUNOS = 5;
+    var nomes = new Array(QTD_ALUNOS)
+    var notas = new Array(QTD_ALUNOS)
+    var situacao = new Array(QTD_ALUNOS)
+
+    for ( let i = 0 ; i < QTD_ALUNOS ; i++){
+        nomes[i] = prompt("Digite o nome do aluno "+ (i+1))
+        do{
+            notas[i] = parseFloat(prompt("Digite a média do aluno "+(i+1)))
+        }while( (notas[i]<0 || notas[i]>10) ||  isNaN(notas[i]) )
+
+        /* calcular a situação do aluno */
+        if(notas[i]>=6){
+            situacao[i]="APROVADO"
+        }else if(notas[i]>=4 && notas[i]<6 ){
+            situacao[i]="RECUPERACAO"
+        }else{
+            situacao[i]="REPROVADO"
+        }
+    }
+    /* Impressao dos resultados */
+
+    for(let i = 0 ; i < QTD_ALUNOS ; i++){
+        console.log(`${i+1} - ${nomes[i]} ; Media=${ notas[i] } ; Situação: ${situacao[i]}\n`)
+    }
+
+</script>
+</html>

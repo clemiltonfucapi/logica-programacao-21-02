@@ -1,0 +1,41 @@
+<html>
+<script>
+    /* Faça um programa que leia os nomes de 10 alunos e a média parcial 
+    de cada. Armazene cada informação em um vetor. Crie um terceiro vetor 
+    que diga que se o aluno está aprovado(nota>=6), de recuperação 
+    ( nota<6 e nota>4) ou reprovado( nota >4) */
+
+    /* Resolução com objetos*/
+
+    var qtd = 5
+    var alunos = new Array(qtd);
+
+    for(let i =0 ; i < qtd ; i++) {
+        // criando objeto vazio
+        let aluno = {}
+        //criando uma nova propriedade (nome)
+        aluno.nome = prompt("Digite o nome do aluno "+ (i+1))
+
+        do{
+            aluno.media = parseFloat(prompt("Digite a média do aluno "+(i+1)))
+        }while( (aluno.media<0 || aluno.media>10) ||  isNaN(aluno.media) )
+
+        /* calcular a situação do aluno*/ 
+        if(aluno.media >= 6){
+            aluno.situacao = "APROVADO"
+        }else if(aluno.media >=4 && aluno.media<6){
+            aluno.situacao = "RECUPERACAO"
+        }else{
+            aluno.situacao="REPROVADO"
+        }
+            
+        //adicionar o objeto aluno no array
+        alunos[i] = aluno
+    }
+
+    for(i=0 ; i< alunos.length ; i++){
+        console.log(`Nome: ${alunos[i].nome} | Media: ${alunos[i].media} | Situacao: ${alunos[i].situacao}`)
+    }
+
+</script>
+</html>

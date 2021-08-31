@@ -1,0 +1,28 @@
+<html>
+<script>
+    /* Faça um programa que leia 2 vetores de 5 posições. 
+    Ao final o programa deve montar um 3º vetor com a soma dos dois.*/
+    var vetor1 = new Array(5)
+    var vetor2 = new Array(5)
+
+    /* leitura do vetor 1 */
+    for( let i = 0 ; i<5 ; i++ ){
+        vetor1[i] = parseFloat(prompt(`Digite o ${i+1}º numero do vetor 1`))
+    }
+
+    /* leitura do vetor 2 */
+    for( let i = 0 ; i<5 ; i++ ){
+        vetor2[i] = parseFloat(prompt(`Digite o ${i+1}º numero do vetor 2`))
+    }
+    //criar um vetor vazio
+    var vetorSoma = [];
+    for(let i = 0 ; i< 5 ; i++){
+        vetorSoma.push( vetor1[i] + vetor2[i] )
+    }
+    console.log(vetor1)
+    console.log(vetor2)
+    console.log(vetorSoma)
+
+
+</script>
+</html>

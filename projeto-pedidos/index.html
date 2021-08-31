@@ -1,0 +1,61 @@
+
+
+
+<html> 
+    <!-- 
+        Projeto Pedidos Pizza
+        - 1 - Fazer um pedido:
+            - O usuario poderá colocar seu nome, escolher o tamanho
+            (P, M e G) da pizza e escolher o sabor da pizza
+        - 2 - Ver Pedidos:
+            - O usuario poderá ver os pedidos. O pedido pode estar
+            EM ESPERA ou ENTREGUE
+        - 3 - Finalizar Pedidos:
+            - O usuario poderá alterar os pedidos EM ESPERA para
+            ENTREGUE
+        - 4 - Cadastrar pizza:
+            - O usuario poderá cadastrar as pizzas
+        - 5 - Faturamento:
+            - O usuario poderá  ver o total de pedidos no estado
+            ENTREGUE
+        - 6 - Sair:
+            - Sai do programa
+    -->
+<script src="dados.js"></script>
+<script src="fazerPedido.js"></script>
+<script src="verPedidos.js"></script>
+<script src="cadastrarPizza.js"></script>
+<script>
+// Criar um menu
+// deprecated
+var stringMenu = ""
+var opcao;
+do {
+    stringMenu=""
+    stringMenu += "----------------BEM VINDO A PIZZARIA MAMAMIA----------------\n"
+    stringMenu+="1 - Fazer um pedido\n";
+    stringMenu+="2 - Ver Pedidos\n";
+    stringMenu+="3 - Finalizar Pedidos\n";
+    stringMenu+="4 - Cadastrar Pizza\n";
+    stringMenu+="5 - Faturamento\n";
+    stringMenu+="6 - Sair"
+
+    opcao = parseInt(prompt(stringMenu))
+    if(opcao==1){
+        fazerPedido();
+    }else if(opcao==2){
+        verPedidos();
+    }else if(opcao==3){
+        alert("Finalizar Pedidos")
+    }else if(opcao==4){
+        cadastrarPizza();
+    }else if(opcao==5){
+        alert("Faturamento")
+    }else if(opcao==6){
+        alert("Saindo...")
+    }else{
+        alert("Opcao Invalida!!")
+    }
+}while(opcao!=6)
+</script>
+</html>
