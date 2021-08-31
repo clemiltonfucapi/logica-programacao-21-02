@@ -22,24 +22,24 @@ function cadastrarPizza(){
     do{
         pizza.ingredientes = prompt("Digite os ingredientes da pizza")
     }while(pizza.ingredientes=="")
-
+    pizza.precos = {};
     do{
-        pizza.precoP = parseFloat(
+        pizza.precos['P'] = parseFloat(
             prompt("Digite o preço da pizza pequena")
         )
-    }while(  isNaN(pizza.precoP) )
+    }while(  isNaN(pizza.precos['P']) )
 
     do{
-        pizza.precoM = parseFloat(
+        pizza.precos['M'] = parseFloat(
             prompt("Digite o preço da pizza media")
         )
-    }while(  isNaN(pizza.precoM) )
+    }while(  isNaN(pizza.precos['M']) )
 
     do{
-        pizza.precoG = parseFloat(
+        pizza.precos['G'] = parseFloat(
             prompt("Digite o preço da pizza grande")
         )
-    }while(  isNaN(pizza.precoG) )
+    }while(  isNaN(pizza.precos['G']) )
     //INSERIR na LISTA_PIZZAS
     LISTA_PIZZAS.push(pizza)
 }
