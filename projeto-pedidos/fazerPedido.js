@@ -28,11 +28,26 @@ function fazerPedido(){
 
     /* mostrar as opcoes de pizza */
     for(let i = 0 ; i < LISTA_PIZZAS.length ; i++){
-        menuPizza+=`${i} - ${LISTA_PIZZAS[i].nome}\n`
-        menuPizza+=`   - ${LISTA_PIZZAS[i].ingredientes}\n`
-        menuPizza+=`   - Preco: ${LISTA_PIZZAS[i].precos[i]}\n`        
-    }
+        //recuperando as pizzas
+        let pizza = LISTA_PIZZAS[i];
 
-    prompt(menuPizza)
+        menuPizza+=`${i} - ${pizza.nome}\n`
+        menuPizza+=`   - ${pizza.ingredientes}\n`
+        menuPizza+=`   - Preco: ${pizza.precos[tamanhoPizza]}\n`        
+    }
+    let opcaoPizza;
+    /* validacao de opcaoPizza -> loop infinito */
+    do{
+        opcaoPizza = parseInt(prompt(menuPizza))
+        //se opcaoPizza esta no intervalo dos indices LISTA_PIZZAS
+        if(opcaoPizza>=0 && opcaoPizza<LISTA_PIZZAS.length){
+            //caso opcaoPizza valido -> sai do loop
+            break;
+        }else{
+            alert("Digite uma opcao valida")
+        }
+    }while(1)
+
+
    
 }
