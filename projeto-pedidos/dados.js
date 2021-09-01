@@ -36,3 +36,16 @@ var LISTA_PIZZAS = [
         }
     }
 ]
+
+var LISTA_PEDIDOS = [
+    /* cada elemento será um PEDIDO
+        - cada Pedido terá SOMENTE 1 pizza
+    */
+    {
+        nomeCliente: "Otavio Mesquita",
+        pizza :"Pizza calabresa",
+        tamanho: "M",
+        total: 35
+    }
+
+]

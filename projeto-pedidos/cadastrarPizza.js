@@ -22,6 +22,7 @@ function cadastrarPizza(){
     do{
         pizza.ingredientes = prompt("Digite os ingredientes da pizza")
     }while(pizza.ingredientes=="")
+
     pizza.precos = {};
     do{
         pizza.precos['P'] = parseFloat(
@@ -40,6 +41,19 @@ function cadastrarPizza(){
             prompt("Digite o preço da pizza grande")
         )
     }while(  isNaN(pizza.precos['G']) )
+    
     //INSERIR na LISTA_PIZZAS
-    LISTA_PIZZAS.push(pizza)
+    let stringConfirm="Deseja adicionar a pizza?\n";
+    stringConfirm += "Nome: "+ pizza.nome +"\n";
+    stringConfirm += "Ingredientes: "+ pizza.ingredientes + "\n";
+    stringConfirm += "Preco P: "+pizza.precos['P'] + "\n";
+    stringConfirm += "Preco M: "+pizza.precos['M'] + "\n";
+    stringConfirm += "Preco G: "+pizza.precos['G'] + "\n";
+    
+    if( confirm(stringConfirm) ){
+        LISTA_PIZZAS.push(pizza)
+        alert("Pizza adicionada!")
+    }
+
+    
 }
