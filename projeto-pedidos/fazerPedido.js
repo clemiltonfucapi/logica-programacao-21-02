@@ -47,7 +47,24 @@ function fazerPedido(){
             alert("Digite uma opcao valida")
         }
     }while(1)
+    let pizza  = LISTA_PIZZAS[opcaoPizza];
+    // adicionar a pizza no pedido
+    pedido.pizza  = pizza.nome;
+    pedido.total = pizza.precos[tamanhoPizza]
+    pedido.status="EM ESPERA"
 
+    let stringConfirm = "Deseja confirmar este pedido? \n"
+    stringConfirm+=`    - Cliente: ${pedido.nomeCliente}\n`
+    stringConfirm+=`    - ${pedido.pizza}\n`
+    stringConfirm+=`    - Tamanho: ${pedido.tamanho}\n`
+    stringConfirm+=`    - Total: R$ ${pedido.total}\n`
 
+    if(confirm(stringConfirm)){
+        // adicionando pedido
+        LISTA_PEDIDOS.push(pedido)
+        alert("Pedido criado!")
+    }else{
+        alert("Pedido cancelado!")
+    }
    
 }

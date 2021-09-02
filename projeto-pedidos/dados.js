@@ -45,7 +45,8 @@ var LISTA_PEDIDOS = [
         nomeCliente: "Otavio Mesquita",
         pizza :"Pizza calabresa",
         tamanho: "M",
-        total: 35
+        total: 35,
+        status:"EM ESPERA"
     }
 
 ]
